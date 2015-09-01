@@ -32,7 +32,7 @@
         <br />
         <asp:Label ID="Label1" runat="server" Text="Telefono"></asp:Label>
         <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Agregar Otro Teléfono" />
+        <asp:Button ID="Button1" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
         <br />
         <br />
         <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" />
