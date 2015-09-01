@@ -35,7 +35,7 @@
         <asp:Button ID="Button1" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
         <br />
         <br />
-        <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" />
+        <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" OnClick="btnAgregarContacto_Click" />
         <br />
     
     </div>

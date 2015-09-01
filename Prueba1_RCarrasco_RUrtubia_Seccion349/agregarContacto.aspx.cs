@@ -32,10 +32,23 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                 //Ver con for
                 t.Telefono          = int.Parse(txtTelefono.Text);
                 listaTelefonos.Add(t);
+                if(Session["listaPersona"] != null)
+                {
+                    listaPersona = (List<Persona>)Session["listaPersona"];
+                }
+
+                //Creación persona
+                Persona p = new Persona(nombre, apellido, ciudad, correo, listaTelefonos, tipoPersona);
+
+                listaPersona.Add(p);
+
+                Session["listaPersona"] = listaPersona;
+
+                Response.Redirect("index.aspx");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                
+                Response.Write("error: " + e.Message);
                 
             }
         }
@@ -44,6 +57,11 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
         {
            
            
+        }
+
+        protected void btnAgregarContacto_Click(object sender, EventArgs e)
+        {
+            ingresarClienteProveedor();
         }
     }
 }

@@ -15,7 +15,8 @@ namespace Negocio
         protected string ciudad;
         protected string correo;
         protected List<Telefonos> telefonos;
-
+        private string tipoPersona;      
+      
         public Persona()
         {
             this.nombre = "nn";
@@ -23,6 +24,7 @@ namespace Negocio
             this.ciudad = "nn";
             this.correo = "n@n.cl";
             this.telefonos = new List<Telefonos>();
+            this.tipoPersona = "nn";
         }
 
         /// <summary>
@@ -31,15 +33,23 @@ namespace Negocio
         /// <param name="n">Nombre</param>
         /// <param name="a">Apellido</param>
         /// <param name="ci">Ciudad</param>
-        /// <param name="co">Comuna</param>
+        /// <param name="co">Correo</param>
         /// <param name="t">Teléfono</param>
-        public Persona(string n, string a, string ci, string co, List<Telefonos> t)
+        /// <param name="tp">Tipo Persona</param>
+        public Persona(string n, string a, string ci, string co, List<Telefonos> t, string tp)
         {
             this.nombre = n;
             this.apeliido = a;
             this.ciudad = ci;
             this.correo = co;
             this.telefonos = t;
+            this.tipoPersona = tp;
+        }
+
+        public string TipoPersona
+        {
+            get { return tipoPersona; }
+            set { tipoPersona = value; }
         }
 
         public List<Telefonos> Telefonos
