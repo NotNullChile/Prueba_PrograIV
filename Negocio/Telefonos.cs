@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class Telefonos
+    public class Telefonos
     {
+        private int telefono;
+
+        public int Telefono
+        {
+            get { return telefono; }
+            set { telefono = value; }
+        }
+        
     }
 }

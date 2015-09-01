@@ -10,11 +10,11 @@ namespace Negocio
     {
         //  nombre y el apellido, la ciudad, el correo electrónico 
         //y uno o varios teléfonos ya sean celulares o fijos.
-        private string nombre;
-        private string apeliido;
-        private string ciudad;
-        private string correo;
-        private List<> telefonos;
+        protected string nombre;
+        protected string apeliido;
+        protected string ciudad;
+        protected string correo;
+        protected List<Telefonos> telefonos;
 
         public Persona()
         {
@@ -22,18 +22,27 @@ namespace Negocio
             this.apeliido = "nn";
             this.ciudad = "nn";
             this.correo = "n@n.cl";
-            this.telefonos = ;
-        }
-        public Persona()
-        {
-            this.nombre;
-            this.apeliido;
-            this.ciudad;
-            this.correo;
-            this.telefonos;
+            this.telefonos = new List<Telefonos>();
         }
 
-        public int[] Telefonos
+        /// <summary>
+        /// Constructor con parámetros
+        /// </summary>
+        /// <param name="n">Nombre</param>
+        /// <param name="a">Apellido</param>
+        /// <param name="ci">Ciudad</param>
+        /// <param name="co">Comuna</param>
+        /// <param name="t">Teléfono</param>
+        public Persona(string n, string a, string ci, string co, List<Telefonos> t)
+        {
+            this.nombre = n;
+            this.apeliido = a;
+            this.ciudad = ci;
+            this.correo = co;
+            this.telefonos = t;
+        }
+
+        public List<Telefonos> Telefonos
         {
             get { return telefonos; }
             set { telefonos = value; }
