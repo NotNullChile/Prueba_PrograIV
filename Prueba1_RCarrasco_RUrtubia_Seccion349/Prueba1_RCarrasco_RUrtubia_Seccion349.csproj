@@ -65,9 +65,33 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="agregarContacto.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="ListadoContactos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agregarContacto.aspx.cs">
+      <DependentUpon>agregarContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agregarContacto.aspx.designer.cs">
+      <DependentUpon>agregarContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoContactos.aspx.cs">
+      <DependentUpon>ListadoContactos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoContactos.aspx.designer.cs">
+      <DependentUpon>ListadoContactos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
