@@ -66,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="agregarContacto.aspx" />
+    <Content Include="BuscarProveedorCiudad.aspx" />
+    <Content Include="BuscarContactoApellido.aspx" />
+    <Content Include="BuscarContactoDominio.aspx" />
     <Content Include="index.aspx" />
     <Content Include="ListadoContactos.aspx" />
     <Content Include="Web.config" />
@@ -77,6 +80,27 @@
     </Compile>
     <Compile Include="agregarContacto.aspx.designer.cs">
       <DependentUpon>agregarContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProveedorCiudad.aspx.cs">
+      <DependentUpon>BuscarProveedorCiudad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarProveedorCiudad.aspx.designer.cs">
+      <DependentUpon>BuscarProveedorCiudad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarContactoApellido.aspx.cs">
+      <DependentUpon>BuscarContactoApellido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarContactoApellido.aspx.designer.cs">
+      <DependentUpon>BuscarContactoApellido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarContactoDominio.aspx.cs">
+      <DependentUpon>BuscarContactoDominio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarContactoDominio.aspx.designer.cs">
+      <DependentUpon>BuscarContactoDominio.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
