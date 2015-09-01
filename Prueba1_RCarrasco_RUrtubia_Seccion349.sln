@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba1_RCarrasco_RUrtubia_Seccion349", "Prueba1_RCarrasco_RUrtubia_Seccion349\Prueba1_RCarrasco_RUrtubia_Seccion349.csproj", "{921DC553-F02F-421A-947A-3E56D16F473F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{ABE29542-8FA5-4DF1-9311-0775E2F146AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{921DC553-F02F-421A-947A-3E56D16F473F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{921DC553-F02F-421A-947A-3E56D16F473F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{921DC553-F02F-421A-947A-3E56D16F473F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE29542-8FA5-4DF1-9311-0775E2F146AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE29542-8FA5-4DF1-9311-0775E2F146AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE29542-8FA5-4DF1-9311-0775E2F146AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE29542-8FA5-4DF1-9311-0775E2F146AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
