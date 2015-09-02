@@ -43,7 +43,26 @@
             
                <%
                    cargarListado();
-                 
+                   if (txtApellido.Text.Length > 0)
+                   {
+                       listadoBusquedasPorApellido();
+                   }
+                   List<Negocio.Persona> listaPersona = (List<Negocio.Persona>)Session["listaPersona"];
+                   if (Session["listaPersona"] != null)
+                   {
+                       foreach (Negocio.Persona p in listaPersona)
+                       {
+                          %>
+
+                            <td>
+                            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" value="<%=p.Rut %>" OnClick="btnEliminar_Click"/>
+                            
+                            </td>
+                          <%    
+                          
+
+                       }
+                   }
                %>
 
                         

@@ -30,8 +30,6 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
             {
                 //Creación de la lista que guardará los datos
                 List<Persona> listaPersona = new List<Persona>();
-                List<Telefono> listaTelefonos = new List<Telefono>();
-                Telefono t = new Telefono();
                 //Recolección de datos de la página
                 string rut          = txtRut.Text;
                 string tipoPersona  = ddlTipoContacto.Text;
@@ -39,16 +37,14 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                 string apellido     = txtApellido.Text;
                 string ciudad       = txtCiudad.Text;
                 string correo       = txtCorreo.Text;
-                //Ver con for
-                t.Numero  = int.Parse(txtTelefono.Text);
-                listaTelefonos.Add(t);
+                string numero  = txtTelefono.Text;
                 if(Session["listaPersona"] != null)
                 {
                     listaPersona = (List<Persona>)Session["listaPersona"];
                 }
 
                 //Creación persona
-                Persona p = new Persona(rut, nombre, apellido, ciudad, correo, listaTelefonos, tipoPersona);
+                Persona p = new Persona(rut, nombre, apellido, ciudad, correo, numero, tipoPersona);
 
                 listaPersona.Add(p);
 
@@ -66,13 +62,11 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
         protected void Button1_Click(object sender, EventArgs e)
         {
             Persona personaTemporal = new Persona();
-            List<Telefono> listaTelefonos = new List<Telefono>();
-            Telefono t = new Telefono();
-            t.Numero = int.Parse(txtTelefono.Text);
+            string numero = txtTelefono.Text;
             personaTemporal.Nombre = txtNombre.Text;
             personaTemporal.Apellido = txtApellido.Text;
             personaTemporal.Correo = txtCorreo.Text;
-            personaTemporal.Telefonos = listaTelefonos;
+            personaTemporal.Telefonos = numero;
             personaTemporal.Ciudad = txtCiudad.Text;
             personaTemporal.TipoPersona = ddlTipoContacto.Text;
             Session["personaTemporal"] = personaTemporal;

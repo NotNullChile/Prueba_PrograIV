@@ -27,9 +27,8 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                   Response.Write("<td class=auto-style1>" +p.Apellido+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Ciudad+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Correo+"</td>");
-                  Response.Write("<td class=auto-style1>" +p.Telefonos+"</td>");
-                  Response.Write("<td class=auto-style1><button value=" + p.Rut + "> Eliminar </td>");
-                  Response.Write("<td class=auto-style1><button value=" + p.Rut + "> Modificar </td>");
+                  Response.Write("<td class=auto-style1>" +p.Telefonos.ToString()+"</td>");
+                  
                   Response.Write("</tr>");
                 }
                }
@@ -52,9 +51,7 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                   Response.Write("<td class=auto-style1>" +p.Apellido+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Ciudad+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Correo+"</td>");
-                  Response.Write("<td class=auto-style1>" +p.Telefonos+"</td>");
-                  Response.Write("<td class=auto-style1><button value=" + p.Rut +"> Eliminar </td>");
-                  Response.Write("<td class=auto-style1><button value=" + p.Rut + "> Modificar </td>");
+                  Response.Write("<td class=auto-style1>" +p.Telefonos+"</td>");                  
                   Response.Write("</tr>");
                 }
                }
@@ -66,10 +63,28 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            if(txtApellido.Text.Length > 0)
+            
+        }
+
+        public void eliminarPersona()
+        {
+            List<Negocio.Persona> listaPersona = (List<Negocio.Persona>)Session["listaPersona"];
+            if(Session["listaPersona"] != null)
             {
-                listadoBusquedasPorApellido();
+                for(int i = 0;i < listaPersona.Count; i++)
+                {
+                    listaPersona.RemoveAt(i);
+                }
             }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminarPersona();
         }
     }
 }
