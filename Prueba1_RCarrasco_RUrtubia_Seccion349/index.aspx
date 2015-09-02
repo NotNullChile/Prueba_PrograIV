@@ -9,10 +9,21 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
-        <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1"></asp:SiteMapDataSource>
+        <table >
+            <tr>
+                <td><a href="index.aspx">Volver al inicio</a></td>
+                <td></td>
+                <td><a href="agregarContacto.aspx">Agregar un nuevo contacto</a></td>
+                <td></td>
+                <td><a href="ListadoContactos.aspx">Modificar/Eliminar/Buscar contactos</a></td>
+                <td></td>
+                <td><a href="listadoTelefonico.aspx">Listado Telefónico</a></td>
+            </tr>
+        </table>
+        <br /><br /><br />
+        
         <br />
-        <asp:Label Text="text" runat="server" >Bienvenido al sistema de contactos</asp:Label>
+        <asp:Label Text="text" runat="server" Font-Bold="True" Font-Italic="True" Font-Underline="True" ForeColor="#000066">Bienvenido al sistema de contactos</asp:Label>
         <br /><br /><br /><br /><br />
         <table>
             <tr>
@@ -25,10 +36,18 @@
             </tr>
             <tr>
                 <td>
-                     <a href="ModificarContacto.aspx">Modificar Contacto</a>
+                     <a href="ListadoContactos.aspx">Modificar/Eliminar/Buscar Contactos</a>
                 </td>
                 <td>
-                    Permite modificar los datos básicos de un contacto.
+                    Permite buscar y seleccionar un contacto existente para eliminarlo o modificar sus datos.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <a href="listadoTelefonico.aspx">Listado Telefónico</a>
+                </td>
+                <td>
+                    Permite ver un listado telefónico de clientes y proovedores.
                 </td>
             </tr>
         </table>

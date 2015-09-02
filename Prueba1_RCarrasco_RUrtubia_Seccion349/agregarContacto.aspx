@@ -9,6 +9,18 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <table >
+            <tr>
+                <td><a href="index.aspx">Volver al inicio</a></td>
+                <td></td>
+                <td><a href="agregarContacto.aspx">Agregar un nuevo contacto</a></td>
+                <td></td>
+                <td><a href="ListadoContactos.aspx">Modificar/Eliminar/Buscar contactos</a></td>
+                <td></td>
+                <td><a href="listadoTelefonico.aspx">Listado Telefónico</a></td>
+            </tr>
+        </table>
+        <br /><br /><br />
     
         <asp:Label ID="lblAgregarContacto" runat="server" Font-Bold="True" Font-Underline="True" Text="Agregar Nuevo Contacto"></asp:Label>
         <br />
@@ -69,6 +81,8 @@
                 <td>
                     <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe Ingresar un Correo Electrónico" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe usar un formato válido: ejemplo@dominio.cl" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
                 </td>
             </tr>
             <tr>
@@ -77,7 +91,6 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Debe Ingresar un teléfono" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td>

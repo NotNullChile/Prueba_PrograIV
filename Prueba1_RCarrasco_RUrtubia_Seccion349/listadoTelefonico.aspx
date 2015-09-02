@@ -9,6 +9,18 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <table >
+            <tr>
+                <td><a href="index.aspx">Volver al inicio</a></td>
+                <td></td>
+                <td><a href="agregarContacto.aspx">Agregar un nuevo contacto</a></td>
+                <td></td>
+                <td><a href="ListadoContactos.aspx">Modificar/Eliminar/Buscar contactos</a></td>
+                <td></td>
+                <td><a href="listadoTelefonico.aspx">Listado Telefónico</a></td>
+            </tr>
+        </table>
+        <br /><br /><br />
     
     </div>
     </form>
