@@ -28,6 +28,8 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                   Response.Write("<td class=auto-style1>" +p.Ciudad+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Correo+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Telefonos+"</td>");
+                  Response.Write("<td class=auto-style1><button value=" + p.Rut + "> Eliminar </td>");
+                  Response.Write("<td class=auto-style1><button value=" + p.Rut + "> Modificar </td>");
                   Response.Write("</tr>");
                 }
                }
@@ -51,6 +53,8 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                   Response.Write("<td class=auto-style1>" +p.Ciudad+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Correo+"</td>");
                   Response.Write("<td class=auto-style1>" +p.Telefonos+"</td>");
+                  Response.Write("<td class=auto-style1><button value=" + p.Rut +"> Eliminar </td>");
+                  Response.Write("<td class=auto-style1><button value=" + p.Rut + "> Modificar </td>");
                   Response.Write("</tr>");
                 }
                }

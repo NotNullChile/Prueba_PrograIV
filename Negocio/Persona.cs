@@ -10,6 +10,7 @@ namespace Negocio
     {
         //  nombre y el apellido, la ciudad, el correo electrónico 
         //y uno o varios teléfonos ya sean celulares o fijos.
+        protected string rut;
         protected string nombre;
         protected string apeliido;
         protected string ciudad;
@@ -19,6 +20,7 @@ namespace Negocio
       
         public Persona()
         {
+            this.rut = "nn";
             this.nombre = "nn";
             this.apeliido = "nn";
             this.ciudad = "nn";
@@ -30,20 +32,28 @@ namespace Negocio
         /// <summary>
         /// Constructor con parámetros
         /// </summary>
+        /// <param name="r">Rut</param>
         /// <param name="n">Nombre</param>
         /// <param name="a">Apellido</param>
         /// <param name="ci">Ciudad</param>
         /// <param name="co">Correo</param>
         /// <param name="t">Teléfono</param>
         /// <param name="tp">Tipo Persona</param>
-        public Persona(string n, string a, string ci, string co, List<Telefono> t, string tp)
+        public Persona(string r, string n, string a, string ci, string co, List<Telefono> t, string tp)
         {
+            this.rut = r;
             this.nombre = n;
             this.apeliido = a;
             this.ciudad = ci;
             this.correo = co;
             this.telefonos = t;
             this.tipoPersona = tp;
+        }
+
+        public string Rut
+        {
+            get { return rut; }
+            set { rut = value; }
         }
 
         public string TipoPersona
