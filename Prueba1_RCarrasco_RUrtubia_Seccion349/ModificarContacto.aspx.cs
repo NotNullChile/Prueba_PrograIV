@@ -38,7 +38,34 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
         {
 
         }
+        public void modificarContacto()
+        {
 
+            List<Negocio.Persona> personaAModificar = (List<Negocio.Persona>)Session["personaAModificar"];
+            List<Persona> listaPersona = new List<Persona>();
+            if (Session["personaAModificar"] != null)
+            {
+                if (Session["listaPersona"] != null)
+                {
+                    listaPersona = (List<Persona>)Session["listaPersona"];
+                }
+                foreach (Negocio.Persona p in personaAModificar)
+                {
+
+                    ddlTipoContacto.Text = p.TipoPersona;
+                    txtRut.Text = p.Rut;
+                    txtNombre.Text = p.Nombre;
+                    txtApellido.Text = p.Apellido;
+                    txtCiudad.Text = p.Ciudad;
+                    txtCorreo.Text = p.Correo;
+                    txtTelefono.Text = p.Telefonos;
+                }
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
+        }
         protected void btnModificarContacto_Click(object sender, EventArgs e)
         {
 

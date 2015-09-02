@@ -184,7 +184,7 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// Control lblTelefono.
+        /// lblTelefono control.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
