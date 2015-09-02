@@ -8,7 +8,7 @@
 <body>
     <form id="form2" runat="server">
     <div>
-    
+
         <asp:Label ID="lblModificarContacto" runat="server" Font-Bold="True" Font-Underline="True" Text="Modificar Contacto"></asp:Label>
         <br />
         <br />
@@ -30,7 +30,7 @@
                     <asp:label text="Rut" ID="lblRut" runat="server" />
                 </td>
                 <td>
-                    <asp:TextBox ID="txtRut" runat="server" OnTextChanged="txtRut_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtRut" runat="server" OnTextChanged="txtRut_TextChanged" value=""></asp:TextBox>
                     <asp:RequiredFieldValidator ID="valRut" runat="server" ControlToValidate="txtRut" ErrorMessage="Debe Ingresar un RUT" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -88,6 +88,7 @@
             </tr>
         </table>
     </div>
+
     </form>
 </body>
 </html>

@@ -12,17 +12,25 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ContactoAModificar"] != null)
+            List<Negocio.Persona> personaAModificar = (List<Negocio.Persona>)Session["personaAModificar"];
+
+            if (Session["personaAModificar"] != null)
             {
-                Persona p = (Persona)Session["ContactoAModificar"];
-                
-                ddlTipoContacto.Text = p.TipoPersona;
-                txtRut.Text = p.Rut;
-                txtNombre.Text = p.Nombre;
-                txtApellido.Text = p.Apellido;
-                txtCiudad.Text = p.Ciudad;
-                txtCorreo.Text = p.Correo;
-                
+                foreach (Negocio.Persona p in personaAModificar)
+                {
+
+                    ddlTipoContacto.Text = p.TipoPersona;
+                    txtRut.Text = p.Rut;
+                    txtNombre.Text = p.Nombre;
+                    txtApellido.Text = p.Apellido;
+                    txtCiudad.Text = p.Ciudad;
+                    txtCorreo.Text = p.Correo;
+                    txtTelefono.Text = p.Telefonos;
+                }
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
             }
         }
 

@@ -86,5 +86,24 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
         {
             eliminarPersona();
         }
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            List<Negocio.Persona> listaPersona = (List<Negocio.Persona>)Session["listaPersona"];
+            if (Session["listaPersona"] != null)
+            {
+                for (int i = 0; i < listaPersona.Count; i++)
+                {
+                    if(listaPersona.ElementAt(i).Rut != null)
+                    {
+                        Session["personaAModificar"] = listaPersona;
+                        Response.Redirect("ModificarContacto.aspx");
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
+        }
     }
 }

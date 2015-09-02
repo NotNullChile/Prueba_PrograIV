@@ -50,21 +50,25 @@
                    List<Negocio.Persona> listaPersona = (List<Negocio.Persona>)Session["listaPersona"];
                    if (Session["listaPersona"] != null)
                    {
+                       string rut = null;
                        foreach (Negocio.Persona p in listaPersona)
                        {
                           %>
-
-                            <td>
+                           <td>
                             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" value="<%=p.Rut %>" OnClick="btnEliminar_Click"/>
-                            
                             </td>
+                            <td>
+                            <asp:Button ID="btnModificar" runat="server" Text="Modificar" value="<%=p.Rut %>" OnClick="btnModificar_Click" />
+                            </td>
+                            
                           <%    
                           
 
                        }
                    }
+                   
                %>
-
+                    
                         
            
         </table>
