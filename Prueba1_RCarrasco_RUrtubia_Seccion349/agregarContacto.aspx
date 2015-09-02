@@ -62,10 +62,10 @@
                     <asp:Label ID="lblTelefono" runat="server" Text="Telefono"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono" runat="server" Visible="True"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
+                    <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" Visible="True" />
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
