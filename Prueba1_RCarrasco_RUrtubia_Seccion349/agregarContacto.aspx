@@ -15,6 +15,7 @@
         <br />
         <br />
         <br />
+        <asp:RequiredFieldValidator ID="validNombre" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
         <asp:Table ID="Table1" runat="server">
             <asp:TableRow>
                 <asp:TableCell><asp:Label ID="lblTipoContato" runat="server" Text="Tipo de Contacto"></asp:Label></asp:TableCell>
@@ -28,70 +29,31 @@
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:label text="Nombre" ID="lblNombre" runat="server" />
-                </asp:TableCell>
-                <asp:TableCell>
+                </asp:TableCell><asp:TableCell>
                     <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
+                </asp:TableCell></asp:TableRow><asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblApellido" runat="server" Text="Apellido"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
+                </asp:TableCell><asp:TableCell>
                     <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
+                </asp:TableCell></asp:TableRow><asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblCiudad" runat="server" Text="Ciudad"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
+                </asp:TableCell><asp:TableCell>
                     <asp:TextBox ID="txtCiudad" runat="server"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
+                </asp:TableCell></asp:TableRow><asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblCorreo" runat="server" Text="Correo"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
+                </asp:TableCell><asp:TableCell>
                     <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
+                </asp:TableCell></asp:TableRow><asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblTelefono" runat="server" Text="Telefono"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
+                </asp:TableCell><asp:TableCell>
                     <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
-                </asp:TableCell>
-                <asp:TableCell>
+                </asp:TableCell><asp:TableCell>
                     <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
+                </asp:TableCell></asp:TableRow><asp:TableRow>
                 <asp:TableCell>
                      <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" OnClick="btnAgregarContacto_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </div>
-            <%if (Session["personaTemporal"] != null)
-      {
-          Negocio.Persona p = new Negocio.Persona();
-          p = (Negocio.Persona)Session["personaTemporal"];
-          foreach (Negocio.Telefono t in p.Telefonos)
-          {
-              Response.Write("<asp:Table>");
-              Response.Write("<asp:TableRow>");
-              Response.Write("<asp:TableCell class=auto-style1> Teléfono ya agregado: </asp:TableCell>");
-              Response.Write("<asp:TableCell class=auto-style1>" + t.Numero + "</asp:TableCell>");
-              Response.Write("</asp:TableRow>");
-              Response.Write("</asp:Table>");
-          }      
-      }
-      
-    %>
-    </form>
-
-</body>
-</html>
+                </asp:TableCell></asp:TableRow></asp:Table></div></form></body></html>

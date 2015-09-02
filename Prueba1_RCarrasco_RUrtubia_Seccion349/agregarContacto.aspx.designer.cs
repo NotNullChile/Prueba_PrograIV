@@ -31,6 +31,15 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.Label lblAgregarNuevoCliente;
         
         /// <summary>
+        /// validNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validNombre;
+        
+        /// <summary>
         /// Table1 control.
         /// </summary>
         /// <remarks>
