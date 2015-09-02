@@ -31,7 +31,7 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.Label lblAgregarNuevoCliente;
         
         /// <summary>
-        /// Control Table1.
+        /// Table1 control.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
