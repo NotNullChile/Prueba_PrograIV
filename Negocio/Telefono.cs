@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class Telefonos
+    public class Telefono
     {
-        private int telefono;
+        private int numero;
 
-        public int Telefono
+        public int Numero
         {
-            get { return telefono; }
-            set { telefono = value; }
+            get { return numero; }
+            set { numero = value; }
         }
         
     }

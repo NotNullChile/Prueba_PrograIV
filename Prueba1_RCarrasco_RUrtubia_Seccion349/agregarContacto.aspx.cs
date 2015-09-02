@@ -13,7 +13,16 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
         static int number = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["personaTemporal"] != null)
+            {
+                Persona personaEnMemoria = (Persona)Session["personaTemporal"];
+                txtNombre.Text = personaEnMemoria.Nombre;
+                txtApellido.Text = personaEnMemoria.Apellido;
+                txtCiudad.Text = personaEnMemoria.Ciudad;
+                txtCorreo.Text = personaEnMemoria.Correo;
+                ddlTipoContacto.Text = personaEnMemoria.TipoPersona;
 
+            }
         }
         public void ingresarClienteProveedor()
         {
@@ -21,8 +30,8 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
             {
                 //Creación de la lista que guardará los datos
                 List<Persona> listaPersona = new List<Persona>();
-                List<Telefonos> listaTelefonos = new List<Telefonos>();
-                Telefonos t = new Telefonos();
+                List<Telefono> listaTelefonos = new List<Telefono>();
+                Telefono t = new Telefono();
                 //Recolección de datos de la página
                 string tipoPersona  = ddlTipoContacto.Text;
                 string nombre       = txtNombre.Text;
@@ -30,7 +39,7 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                 string ciudad       = txtCiudad.Text;
                 string correo       = txtCorreo.Text;
                 //Ver con for
-                t.Telefono          = int.Parse(txtTelefono.Text);
+                t.Numero  = int.Parse(txtTelefono.Text);
                 listaTelefonos.Add(t);
                 if(Session["listaPersona"] != null)
                 {
@@ -55,8 +64,19 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-           
-           
+            Persona personaTemporal = new Persona();
+            List<Telefono> listaTelefonos = new List<Telefono>();
+            Telefono t = new Telefono();
+            t.Numero = int.Parse(txtTelefono.Text);
+            personaTemporal.Nombre = txtNombre.Text;
+            personaTemporal.Apellido = txtApellido.Text;
+            personaTemporal.Correo = txtCorreo.Text;
+            personaTemporal.Telefonos = listaTelefonos;
+            personaTemporal.Ciudad = txtCiudad.Text;
+            personaTemporal.TipoPersona = ddlTipoContacto.Text;
+            Session["personaTemporal"] = personaTemporal;
+
+            Response.Redirect("agregarContacto.aspx");
         }
 
         protected void btnAgregarContacto_Click(object sender, EventArgs e)
