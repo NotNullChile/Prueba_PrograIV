@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="agregarContacto.aspx.cs" Inherits="Prueba1_RCarrasco_RUrtubia_Seccion349.agregarContacto" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarContacto.aspx.cs" Inherits="Prueba1_RCarrasco_RUrtubia_Seccion349.ModificarContacto" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,10 +6,10 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form2" runat="server">
     <div>
     
-        <asp:Label ID="lblAgregarContacto" runat="server" Font-Bold="True" Font-Underline="True" Text="Agregar Nuevo Contacto"></asp:Label>
+        <asp:Label ID="lblModificarContacto" runat="server" Font-Bold="True" Font-Underline="True" Text="Modificar Contacto"></asp:Label>
         <br />
         <br />
         <br />
@@ -31,7 +30,7 @@
                     <asp:label text="Rut" ID="lblRut" runat="server" />
                 </td>
                 <td>
-                    <asp:TextBox ID="txtRut" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtRut" runat="server" OnTextChanged="txtRut_TextChanged"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="valRut" runat="server" ControlToValidate="txtRut" ErrorMessage="Debe Ingresar un RUT" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -76,8 +75,7 @@
                     <asp:Label ID="lblTelefono" runat="server" Text="Telefono"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
+                    <asp:TextBox ID="txtTelefono" runat="server" Enabled="False"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Debe Ingresar un teléfono" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td>
@@ -85,7 +83,7 @@
             </tr>
             <tr>
                 <td>
-                     <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" OnClick="btnAgregarContacto_Click" />
+                     <asp:Button ID="btnModificarContacto" runat="server" Text="Modificar Contacto" OnClick="btnModificarContacto_Click"/>
                 </td>
             </tr>
         </table>
