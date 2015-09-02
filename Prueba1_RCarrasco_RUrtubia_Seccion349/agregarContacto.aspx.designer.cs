@@ -31,24 +31,6 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.Label lblAgregarNuevoCliente;
         
         /// <summary>
-        /// validNombre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator validNombre;
-        
-        /// <summary>
-        /// Table1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
-        
-        /// <summary>
         /// lblTipoContato control.
         /// </summary>
         /// <remarks>
@@ -67,6 +49,24 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.DropDownList ddlTipoContacto;
         
         /// <summary>
+        /// lblRut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRut;
+        
+        /// <summary>
+        /// txtRut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRut;
+        
+        /// <summary>
         /// lblNombre control.
         /// </summary>
         /// <remarks>
@@ -83,6 +83,15 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        
+        /// <summary>
+        /// validNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validNombre;
         
         /// <summary>
         /// lblApellido control.

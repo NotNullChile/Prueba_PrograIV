@@ -15,45 +15,69 @@
         <br />
         <br />
         <br />
-        <asp:RequiredFieldValidator ID="validNombre" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
-        <asp:Table ID="Table1" runat="server">
-            <asp:TableRow>
-                <asp:TableCell><asp:Label ID="lblTipoContato" runat="server" Text="Tipo de Contacto"></asp:Label></asp:TableCell>
-                <asp:TableCell>
+        <Table>
+            <tr>
+                <td>
+                    <asp:Label ID="lblTipoContato" runat="server" Text="Tipo de Contacto"></asp:Label></td>
+                <td>
                     <asp:DropDownList ID="ddlTipoContacto" runat="server">
                         <asp:ListItem>Cliente</asp:ListItem>
                         <asp:ListItem>Proveedor</asp:ListItem>
                     </asp:DropDownList>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
-                <asp:TableCell>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:label text="Rut" ID="lblRut" runat="server" />
+                </td>
+                <td>
+                    <asp:TextBox ID="txtRut" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <asp:label text="Nombre" ID="lblNombre" runat="server" />
-                </asp:TableCell><asp:TableCell>
+                </td>
+                <td>
                     <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
-                </asp:TableCell></asp:TableRow><asp:TableRow>
-                <asp:TableCell>
+                    <asp:RequiredFieldValidator ID="validNombre" runat="server" ErrorMessage="Debe ingresar un nombre" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <asp:Label ID="lblApellido" runat="server" Text="Apellido"></asp:Label>
-                </asp:TableCell><asp:TableCell>
+                </td>
+                <td>
                     <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
-                </asp:TableCell></asp:TableRow><asp:TableRow>
-                <asp:TableCell>
+                </td>
+              </tr>
+              <tr>
+                <td>
                     <asp:Label ID="lblCiudad" runat="server" Text="Ciudad"></asp:Label>
-                </asp:TableCell><asp:TableCell>
+                </td>
+                <td>
                     <asp:TextBox ID="txtCiudad" runat="server"></asp:TextBox>
-                </asp:TableCell></asp:TableRow><asp:TableRow>
-                <asp:TableCell>
+                </td>
+
+              </tr><tr>
+                <td>
                     <asp:Label ID="lblCorreo" runat="server" Text="Correo"></asp:Label>
-                </asp:TableCell><asp:TableCell>
+                </td>
+                <td>
                     <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
-                </asp:TableCell></asp:TableRow><asp:TableRow>
-                <asp:TableCell>
+                </td>
+
+                   </tr>
+                <tr>
+                <td>
                     <asp:Label ID="lblTelefono" runat="server" Text="Telefono"></asp:Label>
-                </asp:TableCell><asp:TableCell>
+                </td>
+                    <td>
                     <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
-                </asp:TableCell><asp:TableCell>
+                </td><td>
                     <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
-                </asp:TableCell></asp:TableRow><asp:TableRow>
-                <asp:TableCell>
+                </td></tr>
+                <tr>
+                <td>
                      <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" OnClick="btnAgregarContacto_Click" />
-                </asp:TableCell></asp:TableRow></asp:Table></div></form></body></html>
+                </td></tr></Table></div></form></body></html>
