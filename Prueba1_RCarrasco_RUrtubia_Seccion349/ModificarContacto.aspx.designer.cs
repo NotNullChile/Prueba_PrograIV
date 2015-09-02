@@ -10,25 +10,25 @@
 namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
     
     
-    public partial class agregarContacto {
+    public partial class ModificarContacto {
         
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
-        /// lblAgregarContacto control.
+        /// lblModificarContacto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAgregarContacto;
+        protected global::System.Web.UI.WebControls.Label lblModificarContacto;
         
         /// <summary>
         /// lblTipoContato control.
@@ -202,15 +202,6 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.TextBox txtTelefono;
         
         /// <summary>
-        /// btnNuevoTelefono control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNuevoTelefono;
-        
-        /// <summary>
         /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
@@ -220,12 +211,12 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// btnAgregarContacto control.
+        /// btnModificarContacto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarContacto;
+        protected global::System.Web.UI.WebControls.Button btnModificarContacto;
     }
 }
