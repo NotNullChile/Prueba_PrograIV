@@ -33,6 +33,7 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                 List<Telefono> listaTelefonos = new List<Telefono>();
                 Telefono t = new Telefono();
                 //Recolección de datos de la página
+                string rut          = txtRut.Text;
                 string tipoPersona  = ddlTipoContacto.Text;
                 string nombre       = txtNombre.Text;
                 string apellido     = txtApellido.Text;
@@ -47,7 +48,7 @@ namespace Prueba1_RCarrasco_RUrtubia_Seccion349
                 }
 
                 //Creación persona
-                Persona p = new Persona(nombre, apellido, ciudad, correo, listaTelefonos, tipoPersona);
+                Persona p = new Persona(rut, nombre, apellido, ciudad, correo, listaTelefonos, tipoPersona);
 
                 listaPersona.Add(p);
 

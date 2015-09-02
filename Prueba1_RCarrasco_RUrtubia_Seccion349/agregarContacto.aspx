@@ -71,13 +71,11 @@
                 <tr>
                 <td>
                     <asp:Label ID="lblTelefono" runat="server" Text="Telefono"></asp:Label>
-                </td>
-                    <td>
+                </td><td>
                     <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
                 </td><td>
                     <asp:Button ID="btnNuevoTelefono" runat="server" Text="Agregar Otro Teléfono" OnClick="Button1_Click" />
-                </td></tr>
-                <tr>
+                </td></tr><tr>
                 <td>
                      <asp:Button ID="btnAgregarContacto" runat="server" Text="Agregar Contacto" OnClick="btnAgregarContacto_Click" />
                 </td></tr></Table></div></form></body></html>
